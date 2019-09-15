@@ -52,6 +52,13 @@ flutter:
   assets:
    - assets/icon.jpg
    - assets/mlink_title.png
+   - assets/ticket.png
+   - assets/ticket_dark.png
+   - assets/wallet.png
+   - assets/bottom_icons.png
+   - assets/options.png
+   - assets/ticket_alt.png
+   - assets/home.png
 
   fonts:
     - family: Roboto
