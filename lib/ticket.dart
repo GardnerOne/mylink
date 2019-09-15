@@ -8,6 +8,7 @@ class TicketPage extends StatefulWidget {
 class _TicketPageState extends State<TicketPage> {
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: MyApp.background_alt,
         title: Text('Adult Rail Monthly'),

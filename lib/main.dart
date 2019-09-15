@@ -264,6 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         backgroundColor: MyApp.background,
         title: Image.asset(
