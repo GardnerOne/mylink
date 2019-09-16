@@ -7,7 +7,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   static final Color background = Color(0xffcbcbcb);
-  static final Color background_alt = Color(0xffbbbbbb);
+  static final Color backgroundAlt = Color(0xffbbbbbb);
   static final Color backgroundDark = Color(0xff7e8082);
   static final Color primary = Color(0xff41938E);
   static final Color light = Color(0xfffefefe);
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: MyHomePage(title: 'Flutter Demo Home Page'),
-      theme: ThemeData(fontFamily: 'Roboto'),
+      theme: ThemeData(fontFamily: 'Helvetica Neue'),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -65,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
               "Important Payment information - Find out more",
               style: TextStyle(
                 color: MyApp.light,
-                fontSize: 14.0,
+                fontSize: 13.0,
+                fontWeight: FontWeight.w400,
               ),
             ),
             Icon(
@@ -125,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(
                             color: MyApp.light,
                             fontSize: _buttonTextSize,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                         SizedBox(
@@ -135,6 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(
                             color: MyApp.light,
                             fontSize: _buttonSmallTextSize,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
                       ],
@@ -185,6 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(
                           color: MyApp.text,
                           fontSize: _buttonTextSize,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       SizedBox(
@@ -195,6 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(
                           color: MyApp.text,
                           fontSize: _buttonSmallTextSize,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ],
@@ -241,6 +246,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(
                           color: MyApp.text,
                           fontSize: _buttonTextSize,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       SizedBox(
@@ -251,6 +257,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(
                           color: MyApp.text,
                           fontSize: _buttonSmallTextSize,
+                          fontWeight: FontWeight.w400,
                         ),
                       ),
                     ],
@@ -292,7 +299,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/ticket_alt.png',
-              height: 30.0,
+              height: 33.0,
             ),
             title: Text(
               'Ticket Wallet',

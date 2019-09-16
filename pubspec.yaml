@@ -59,6 +59,7 @@ flutter:
    - assets/options.png
    - assets/ticket_alt.png
    - assets/home.png
+   - assets/nirailways.png
 
   fonts:
     - family: Roboto
