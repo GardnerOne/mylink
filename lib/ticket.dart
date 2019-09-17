@@ -37,20 +37,20 @@ class _TicketPageState extends State<TicketPage> {
     );
   }
 
-  Widget _currentTimeBox(String data) {
+  Widget _currentTimeBox(String title, String data) {
     return Column(
       children: <Widget>[
         Text(
-          'Days',
+          title,
           style: TextStyle(
             color: MyApp.text,
-            fontSize: 10.0,
+            fontSize: 12.0,
           ),
         ),
         Container(
           margin: EdgeInsets.only(top: 8.0),
-          width: 45.0,
-          height: 30.0,
+          width: 65.0,
+          height: 40.0,
           decoration: BoxDecoration(
             color: Colors.transparent,
             borderRadius: BorderRadius.all(
@@ -73,7 +73,7 @@ class _TicketPageState extends State<TicketPage> {
             child: Text(
               data,
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: 20.0,
               ),
             ),
           ),
@@ -82,17 +82,55 @@ class _TicketPageState extends State<TicketPage> {
     );
   }
 
+  Widget _secondsBox() {
+    return Column(
+      children: <Widget>[
+        Text(
+          'Seconds',
+          style: TextStyle(
+            color: MyApp.text,
+            fontSize: 12.0,
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(top: 8.0),
+          width: 65.0,
+          height: 40.0,
+          child: Center(
+            child: Text(
+              (60 - DateTime.now().second).toString(),
+              style: TextStyle(
+                fontSize: 20.0,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _timeDetails() {
+    double _spacer = 20.0;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        _currentTimeBox('10'),
+        _currentTimeBox('Days', DateTime.now().day.toString()),
+        SizedBox(width: _spacer),
+        _currentTimeBox('Hours', DateTime.now().hour.toString()),
+        SizedBox(
+          width: _spacer,
+        ),
+        _currentTimeBox('Minutes', DateTime.now().minute.toString()),
+        SizedBox(
+          width: _spacer,
+        ),
+        _secondsBox(),
       ],
     );
   }
 
   String getCurrentTime() {
-    return '09:36';
+    return DateTime.now().toIso8601String().substring(11, 16);
   }
 
   Widget build(BuildContext context) {
@@ -107,6 +145,13 @@ class _TicketPageState extends State<TicketPage> {
         children: <Widget>[
           _liveBar(getCurrentTime()),
           _timeDetails(),
+          SizedBox(height: 10.0,),
+          Text(
+            'Activated on Tue 3 Sep 2019 at 07:07',
+            style: TextStyle(
+              fontSize: 17.0,
+            ),
+          ),
         ],
       ),
       backgroundColor: MyApp.background,
