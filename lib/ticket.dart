@@ -129,6 +129,10 @@ class _TicketPageState extends State<TicketPage> {
     );
   }
 
+  Widget _bigInfo() {
+    return Text('hello');
+  }
+
   String getCurrentTime() {
     return DateTime.now().toIso8601String().substring(11, 16);
   }
@@ -152,6 +156,7 @@ class _TicketPageState extends State<TicketPage> {
               fontSize: 17.0,
             ),
           ),
+          _bigInfo(),
         ],
       ),
       backgroundColor: MyApp.background,
